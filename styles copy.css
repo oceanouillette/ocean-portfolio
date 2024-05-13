@@ -1,0 +1,259 @@
+body {
+	background-color: #D5E2CA;
+	margin: 0;
+  	padding: 0;
+}
+
+.sidebar h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 275%;
+  color: #FAF0F8;
+  display: block;
+  padding: 16px;
+  padding-top: 0;
+  margin:0;
+  font-weight: 600;
+  text-align: center;
+    font-style:none;
+}
+
+.sidebar h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 150%;
+  color: #FAF0F8;
+  display: block;
+  padding: 16px;
+  margin: 0;
+  font-weight: 400;
+  font-style: italic;
+  text-align: center;
+}
+
+.sidebar h3{
+  font-family: "Playfair Display", serif;
+  color: #FAF0F8;
+  display: block;
+  padding: 16px;
+  margin: 0;
+  font-weight: 400;
+  text-align: center;
+}
+
+
+#colophon {
+  padding-top: 20px;
+}
+
+.content h1 {
+  font-family: "Playfair Display", serif;
+    color: 2D252D;
+      font-style: italic;
+     text-align: center;
+}
+
+.content h2 {
+  font-family: "Playfair Display", serif;
+    color: 2D252D;
+}
+
+.content p {
+  font-family: "Roboto", serif;
+  font-size: 130%;
+    color: 2D252D;
+  
+}
+
+.content li {
+  font-family: "Roboto", serif;
+  font-size: 130%; 
+    color: 2D252D;
+}
+
+.long li {
+  margin-bottom: 15px;  
+}
+
+.content p + ul {
+  margin-top: -15px;
+}
+
+.content a {
+  color: #CFBFF7;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+#footer p {
+  font-family: "Playfair Display", serif;
+  text-align: center;
+}
+
+#footer {
+  padding-top: 0px;
+  padding-left: 0px;
+}
+
+
+/* LAYOUT STUFF */
+
+/* Page content. The content margin-left must match the sidebar width */
+div.content {
+  margin-left: 100px;/* <--- CHANGE US TOGETHER*/
+   margin-right: 100px;
+    padding-top: 75px;
+  padding-left: 25px;
+  padding-right: 16px;
+  height: 1000px;
+    background-color: #b9db9c
+}
+
+ /* The side navigation menu */
+.sidebar {
+  margin: 0;
+  padding: 0;
+padding-top: 115;
+  width: 350px;          /* <--- CHANGE US TOGETHER */
+  background-color: #705C70;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+/* Sidebar links */
+.sidebar a {
+  font-family: "Playfair Display", serif;
+  display: block;
+  color: #FAF0F8;
+  padding: 16px;
+  padding-right: 30px;
+  text-decoration: none;
+  text-align: right;
+  font-size: 125%;
+}
+
+.topbar {
+  margin: 0;
+  padding: 0;
+  width: 100%;          /* <--- CHANGE US TOGETHER */
+  background-color: #4F404F;
+  position: fixed;
+  height: 115px;
+  overflow: auto;
+}
+
+#colophon a {
+  font-family: "Playfair Display", serif;
+  font-size: 100%;
+  color: #FAF0F8;
+  display: block;
+  padding: 0px;
+  padding-top: 0;
+  margin:0;
+  font-weight: 600;
+  text-align: center;
+}
+
+#colophon b {
+  font-family: "Playfair Display", serif;
+  font-size: 100%;
+  color: #FAF0F8;
+  display: block;
+  padding: 0px;
+  padding-top: 0;
+  margin:0;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Active/current link */
+.sidebar a.active {
+  background-color: #4F404F;
+  color: #FAF0F8;
+}
+
+/* Links on mouse-over */
+.sidebar a:hover:not(.active) {
+  background-color: #4F404F;
+  color: #FAF0F8;
+}
+
+#colophon a:hover:not(.active) {
+  background-color: #4F404F;
+  color: #FAF0F8;
+}
+
+/* On screens that are less than 700px wide, make the sidebar into a topbar */
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+  
+  div.content{
+  padding-top: 115px;
+  padding-left: 10px;
+  padding-right: 10px;
+  }
+
+}
+
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+    padding: 0px;
+  }
+  
+  div.content{
+  padding-top: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+    color: #b9db9c
+  }
+} 
+/* Dropdown Button */
+.dropbtn {
+  background-color: #705C70;
+  color: #FAF0F8;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #705C70;
+  min-width: 160px;
+         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
+    
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: #4F404F
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #4F404F;
+color: #FAF0F8}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #4F404F;}
